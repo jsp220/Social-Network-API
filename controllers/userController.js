@@ -15,7 +15,16 @@ const getSingleUser = async (req, res) => {
     try {
         const response = await User.findOne({ _id: req.params.userId})
             .select('-__v')
-            .populate(['thoughts', 'friends']);
+            .populate([
+                {
+                    path: 'thoughts', 
+                    populate: 'reactions'
+                }, 
+                {
+                    path: 'friends',
+                    select: '-__v -email -thoughts'
+                } 
+            ]);
         if (response) res.status(200).json(response);
         else res.status(404).json({ message: 'User not found'});
     } catch(err) {
