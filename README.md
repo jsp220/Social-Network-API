@@ -33,6 +33,7 @@ Using an API client such as Insomnia, you are able to create, read, update, and 
 ## Walkthrough Video
 
 [Walkthrough Video](https://www.youtube.com/watch?v=5bINFp1Pq18)
+[Walkthrough Video Part 2](https://www.youtube.com/watch?v=tBZYcKxJgB8)
 
 ## License
 
